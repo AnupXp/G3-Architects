@@ -1,42 +1,86 @@
 /* font from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+/* shared style */
 *{
     font-family: 'Work Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
+.btn-primary{
+    color: #FFF;
+    background: #FF900E;
+    width: 180px;
+    height: 64px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
 /* header related styles */
 header{
     background: rgba(255, 144, 14, 0.10);
-    padding: 50px 240px;
+    padding: 50px 140px;
 }
 nav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-nav h3{
-    color: var(--Dark-01, #131313);
-    font-size: 45px;
-    font-weight: 700;
+    padding-bottom: 100px;
 }
 nav >ul{
     display: flex;
+    align-items: center;
+    list-style: none;
 }
 nav li{
-    list-style: none;
-    margin-left: 30px ;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 26px
+    padding-left: 30px;
 }
 nav a{
     text-decoration: none;
     color: var(--Dark-02, #424242);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
 }
-.banner>.banner-title{
+nav >h3{
     color: var(--Dark-01, #131313);
-    text-align: center;
-    font-size: 64px;
+    font-size: 45px;
     font-weight: 700;
 }
+.banner-content{
+    max-width: 54rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.banner-title{
+    color: var(--Dark-01, #131313);
+    font-size: 64px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.banner-text{
+    color: var(--Dark-03, #727272);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    padding-bottom: 2rem;
+}
+.banner img{
+    width: 100%;
+    padding-top: 50px;
+}
+/* mobile device related media query */
+@media screen and (max-width:576px) {
+    header{
+        padding:30px
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav h3{
+        padding-bottom: 30px;
+        text-align: center;
+    }
+}
+/* tablet device related media query */
